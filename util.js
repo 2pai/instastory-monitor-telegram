@@ -41,10 +41,17 @@ const loadData = (path) => {
       return false
     }
 }
+const updateData = function(path, id, value) {
+    const data =  fs.readFileSync(path, 'utf8')
+    const content = JSON.parse(data)
+    content.forEach((s) => s.id === id && (s.send = value));
+    fsp.writeFileSync(path, JSON.stringify(content))
+};
 
 module.exports = {
     storeData,
     loadData,
+    updateData,
     downloadImage,
     upsertDirectory
 }
