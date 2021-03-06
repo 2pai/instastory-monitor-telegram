@@ -1,6 +1,7 @@
 const fs = require('fs')
 const fsp = require('fs-path')
 const download = require('image-downloader')
+const fetch = require('node-fetch')
 
 const upsertDirectory = (path) => {
     if (!fs.existsSync(path)){
@@ -10,7 +11,7 @@ const upsertDirectory = (path) => {
     }
 }
 
-const downloadImage = (url, dir, filename) => {
+const downloadImage = async (url, dir, filename) => {
     const opt = { 
         url,
         dest: `${dir}/${filename}`,
@@ -24,6 +25,17 @@ const downloadImage = (url, dir, filename) => {
           console.error(err)
           return false
       })
+}
+const downloadVideo = async (url, dir, filename) => {
+    const opt = { 
+        url,
+        dest: `${dir}/${filename}`
+    }
+    const response = await fetch(opt.url);
+    const buffer = await response.buffer();
+
+    fs.writeFile(opt.dest, buffer, () => true);                                          
+ 
 }
 const storeData = (path, data) => {
     try {
@@ -53,6 +65,7 @@ module.exports = {
     loadData,
     updateData,
     downloadImage,
+    downloadVideo,
     upsertDirectory
 }
     

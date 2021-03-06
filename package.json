@@ -8,6 +8,7 @@
     "fs-path": "0.0.25",
     "image-downloader": "^4.0.2",
     "instagram-private-api": "^1.43.3",
+    "node-fetch": "^2.6.1",
     "node-telegram-bot-api": "^0.51.0"
   },
   "devDependencies": {},
