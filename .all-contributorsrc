@@ -13,6 +13,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "2pai",
+      "name": "Iqbal syamil ayasy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22183588?v=4",
+      "profile": "https://github.com/2pai",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
