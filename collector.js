@@ -65,7 +65,7 @@ function credLoad() {
       storyMetadata.push({
         id,
         url: storyElementTarget[0].url,
-        mediaType: media_type,
+        mediaType: media_type, // 1 for image, 2 for video
         path: dt.toLocaleDateString("eu-ES"), // make format yyyy/M/dd
         timestamp: dt.toLocaleString("id-ID"),
         send: false,
