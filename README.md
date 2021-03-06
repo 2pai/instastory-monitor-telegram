@@ -33,7 +33,7 @@ npm run frontend # run the frontend to serve metadata
 This collector will be collect instagram story metadata from instagram private api then compare (with local metadata) & store/append it to `metadata-story.json`
 
 The metadata structure will be 
-```json
+```js
 {
     id, // uniquie id
     url, // url content

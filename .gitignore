@@ -4,3 +4,4 @@ images/*
 session.json
 yarn.lock
 videos/*
+.DS_Store
