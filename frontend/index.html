@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐬 Instagram Story Explorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">🐙 InstaStory Explorer</h1>
+            <hr>
+        </div>
+        <div class="row row-cols-1 g-4">
+            <% let contentPath =[];metadataStory.forEach(function(content) { %>
+            <% if(!contentPath.includes(content.path)) { %>
+                <div class="col-12">
+                    <h4>🗓 <%= content.path %></h4>
+                    <hr>
+                </div>
+            <% contentPath.push(content.path)} %>
+            <div class="col-md-3 col-sm-12">
+              <div class="card">
+                <% if(content.mediaType == 1) { %>
+                <img src="<%= content.url %>" class="card-img-top">
+                <% } else if(content.mediaType == 2) { %>
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <video controls="true" class="embed-responsive-item" width="100%">
+                          <source src="<%= content.url %>" type="video/mp4" />
+                        </video>
+                    </div>
+                <% } %>
+                <div class="card-body">
+                <h5 class="card-title"">Metadata</h5>
+                  <p class="card-text">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th>🌟ID</th>
+                                <td><%= content.id %></td>
+                            </tr>
+                            <tr>
+                                <th>📷Taken</th>
+                                <td><%= content.timestamp %></td>
+                            </tr>
+                            <tr>
+                                <th>💾Downloaded</th>
+                                <td><%= content.downloaded %></td>
+                            </tr>
+                            <tr>
+                                <th>🚀Dispatched</th>
+                                <td><%= content.send %></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a class="btn btn-primary btn-lg" href="<%= content.url %>" role="button">📂 Open Media</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+    <pre>
+    </pre>
+</body>
+</html>
