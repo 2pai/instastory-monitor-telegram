@@ -24,13 +24,20 @@ npm run download # download content locally
 npm run frontend # run the frontend to serve metadata
 
 ```
+or simply by using `orcestrator.sh`
+```bash
+chmod +x ./orchestractor.sh
+./orchestractor.sh
 
+You can also run the orcestrator with CronJob to update the metadata & dispatch periodically.
+
+```
 ## Architecture 🏹
 ![image](assets/Instagram-telegram.png)
 
 
 ### `collector.js`
-This collector will be collect instagram story metadata from instagram private api then compare (with local metadata) & store/append it to `metadata-story.json`
+This collector will be collecting instagram story metadata from instagram private api then compare it (with local metadata) & store/append it to `metadata-story.json`
 
 The metadata structure will be 
 ```js
