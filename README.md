@@ -24,13 +24,13 @@ npm run download # download content locally
 npm run frontend # run the frontend to serve metadata
 
 ```
-or simply by using `orcestrator.sh`
+or simply by using `orchestrator.sh`
 ```bash
-chmod +x ./orchestractor.sh
-./orchestractor.sh
+chmod +x ./orchestrator.sh
+./orchestrator.sh
 ```
 
-You can also run the orcestrator with CronJob to update the metadata & dispatch periodically.
+You can also run the orchestrator with CronJob to update the metadata & dispatch periodically.
 
 ## Architecture 🏹
 ![image](assets/Instagram-telegram.png)
