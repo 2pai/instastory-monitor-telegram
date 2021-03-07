@@ -28,10 +28,10 @@ or simply by using `orcestrator.sh`
 ```bash
 chmod +x ./orchestractor.sh
 ./orchestractor.sh
+```
 
 You can also run the orcestrator with CronJob to update the metadata & dispatch periodically.
 
-```
 ## Architecture 🏹
 ![image](assets/Instagram-telegram.png)
 
