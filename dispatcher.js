@@ -1,9 +1,5 @@
 require('dotenv').config()
-
-const {
-    loadData,
-    updateData,
-} = require('./util')
+const {loadData, updateData} = require('./util')
 const TelegramBot = require('node-telegram-bot-api');
 const token = process.env.TOKEN_TELEGRAM;
 const bot = new TelegramBot(token);
