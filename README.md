@@ -12,7 +12,7 @@ git clone https://github.com/2pai/instastory-monitor-telegram
 ```
 cp .env.example .env
 ```
-> Note: you can add more than one target in TARGET_USERNAME with comma separator (Example: instagram, facebook, google). for now there is no target limit, but keep in mind that the more targets the longer the process.
+> Note: you can add more than one target in TARGET_USERNAME with comma separator without spaces (Example: instagram,facebook,google). for now there is no target limit, but keep in mind that the more targets the longer the process.
 3. Install the dependency
 ```
 npm install
