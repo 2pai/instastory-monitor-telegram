@@ -12,6 +12,7 @@ git clone https://github.com/2pai/instastory-monitor-telegram
 ```
 cp .env.example .env
 ```
+> Note: you can add more than one target in TARGET_USERNAME with comma separator without spaces (Example: instagram,facebook,google). for now there is no target limit, but keep in mind that the more targets the longer the process.
 3. Install the dependency
 ```
 npm install
@@ -42,6 +43,7 @@ This collector will be collecting instagram story metadata from instagram privat
 The metadata structure will be 
 ```js
 {
+    username, // username target
     id, // uniquie id
     url, // url content
     mediaType, // 1 for image, 2 for video
