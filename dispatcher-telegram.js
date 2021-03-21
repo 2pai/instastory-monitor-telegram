@@ -9,12 +9,12 @@ const metadataStory = loadData("./metadata-story.json");
 
 metadataStory
     .map(story => {
-        if (story.send) return
+        if (story.send_telegram) return
         if (story.mediaType == 1) { // Image
             bot.sendPhoto(chatID, story.url)
                 .then((data) => {
                     console.log(`Success send ${story.id} to ${data.chat.title || data.chat.username || data.chat.first_name || data.chat.last_name} (${data.chat.id})`)
-                    updateData("./metadata-story.json", story.id, true)
+                    updateData("./metadata-story.json", story.id, true, "telegram")
                 }).catch((error) => {
                     console.log(`failed to send ${story.id}`)
                 })
@@ -22,7 +22,7 @@ metadataStory
             bot.sendVideo(chatID, story.url)
                 .then((data) => {
                     console.log(`Success send ${story.id} to ${data.chat.title || data.chat.username || data.chat.first_name || data.chat.last_name} (${data.chat.id})`)
-                    updateData("./metadata-story.json", story.id, true)
+                    updateData("./metadata-story.json", story.id, true, "telegram")
                 }).catch((error) => {
                     console.log(`failed to send ${story.id}`)
                 })
