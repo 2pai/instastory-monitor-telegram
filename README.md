@@ -1,6 +1,6 @@
 ## Instagram Story Monitor
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Monitor story your target instagram account & send to telegram on every update. This app also Inlcuding auto backup locally & frontend for local `metadata-story` explorer. 
 ## How To Use 📚
@@ -78,6 +78,7 @@ Thanks goes to these wonderful people :
   <tr>
     <td align="center"><a href="https://github.com/YogaSakti"><img src="https://avatars.githubusercontent.com/u/24309806?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Imperial Owl</b></sub></a><br /><a href="https://github.com/2pai/instastory-monitor-telegram/commits?author=YogaSakti" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/2pai"><img src="https://avatars.githubusercontent.com/u/22183588?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iqbal syamil ayasy</b></sub></a><br /><a href="https://github.com/2pai/instastory-monitor-telegram/commits?author=2pai" title="Code">💻</a> <a href="https://github.com/2pai/instastory-monitor-telegram/commits?author=2pai" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://fauzan.tech"><img src="https://avatars.githubusercontent.com/u/50759463?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammad Fauzan</b></sub></a><br /><a href="https://github.com/2pai/instastory-monitor-telegram/commits?author=fauzan121002" title="Code">💻</a></td>
   </tr>
 </table>
 
