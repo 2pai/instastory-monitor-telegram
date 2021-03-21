@@ -19,7 +19,8 @@ npm install
 4. Run the app in order
 ```bash
 npm run collect  # collect instagram story metadata
-npm run dispatch # dispatch / send instagram story to telegram
+npm run dispatch-telegram # dispatch / send instagram story to telegram
+npm run dispatch-discord # dispatch / send instagram story to discord
 npm run download # download content locally
 npm run frontend # run the frontend to serve metadata
 
@@ -51,11 +52,12 @@ The metadata structure will be
     downloaded, // status downloader
 }
 ```
-### `dispatcher.js`
-This dispatcher will read the `metadata-story.json` and check if the `send` property was false then the dispatcher will send the media (based on media type) to the defined `chatId` telegram. 
+### `dispatcher`
+This dispatcher will read the `metadata-story.json` and check if the `send` property was false then the dispatcher will send the media (based on media type) to the defined telegram chat/ discord channel. 
 
-If the dispatcher success send the media to the telegram, it will update the metadata `send` to true. 
+If the dispatcher success send the media, it will update the metadata `send` to true. 
 
+> *Don't forget to specify your dispatcher in .env (default = telegram)*
 ### `downloader.js`
 This downloader will read the `metadata-story.json` and check if the `downloaded` property was false then the downloader will download the media (based on media type) locally to the defined `path` on metadata, the path was using `yyyy/M/dd` to make searching the content more easy (if needed). 
 

@@ -17,7 +17,9 @@
   "devDependencies": {},
   "scripts": {
     "frontend": "node index.js",
-    "dispatch": "node dispatcher.js",
+    "dispatch": "npm run dispatch-telegram",
+    "dispatch-telegram": "node dispatcher-telegram.js",
+    "dispatch-discord": "node dispatcher-discord.js",
     "collect": "node collector.js",
     "download": "node downloader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
