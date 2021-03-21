@@ -11,12 +11,15 @@
     "image-downloader": "^4.0.2",
     "instagram-private-api": "^1.43.3",
     "node-fetch": "^2.6.1",
-    "node-telegram-bot-api": "^0.51.0"
+    "node-telegram-bot-api": "^0.51.0",
+    "webhook-discord": "^3.7.7"
   },
   "devDependencies": {},
   "scripts": {
     "frontend": "node index.js",
-    "dispatch": "node dispatcher.js",
+    "dispatch": "npm run dispatch-telegram",
+    "dispatch-telegram": "node dispatcher-telegram.js",
+    "dispatch-discord": "node dispatcher-discord.js",
     "collect": "node collector.js",
     "download": "node downloader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
