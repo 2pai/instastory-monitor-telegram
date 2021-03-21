@@ -23,6 +23,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "fauzan121002",
+      "name": "Muhammad Fauzan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50759463?v=4",
+      "profile": "http://fauzan.tech",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
