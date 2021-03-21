@@ -17,7 +17,7 @@ cp .env.example .env
 ```
 npm install
 ```
-4. Run the app in order
+4. Run the command in order
 ```bash
 npm run collect  # collect instagram story metadata
 npm run dispatch-telegram # dispatch / send instagram story to telegram
