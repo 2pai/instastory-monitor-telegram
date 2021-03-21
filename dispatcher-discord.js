@@ -12,7 +12,7 @@ const metadataStory = loadData("./metadata-story.json");
 
 metadataStory
     .map(story => {
-        if (story.send) return
+        if (story.send_discord) return
         if (story.mediaType == 1) { // Image
             const msg = new webhook.MessageBuilder()
                 .setName("SnapgramLord")
@@ -24,7 +24,7 @@ metadataStory
 
             Hook.send(msg)
                 .then((data) => {
-                    updateData("./metadata-story.json", story.id, true)
+                    updateData("./metadata-story.json", story.id, true, "discord")
                 }).catch((error) => {
                     console.log("failed to send: " + story.id)
                 })
@@ -40,7 +40,7 @@ metadataStory
 
             Hook.send(msg)
                 .then((data) => {
-                    updateData("./metadata-story.json", story.id, true)
+                    updateData("./metadata-story.json", story.id, true, "discord")
                 }).catch((error) => {
                     console.log("failed to send: " + story.id)
                 })

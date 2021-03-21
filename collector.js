@@ -70,7 +70,8 @@ function credLoad() {
           mediaType: media_type, // 1 for image, 2 for video
           path: dt.toLocaleDateString("eu-ES"), // make format yyyy/M/dd
           timestamp: dt.toLocaleString("id-ID"),
-          send: false,
+          send_telegram: false, //is story sended - telegram
+          send_discord: false, //is story sended - discord
           downloaded: false,
         })
       })).then(() => {

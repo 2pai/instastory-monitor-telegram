@@ -53,10 +53,15 @@ const loadData = (path) => {
       return false
     }
 }
-const updateData = function(path, id, value) {
+const updateData = function(path, id, value, mediaName) {
     const data =  fs.readFileSync(path, 'utf8')
     const content = JSON.parse(data)
-    content.forEach((s) => s.id === id && (s.send = value));
+    if(mediaName == "discord"){
+        content.forEach((s) => s.id === id && (s.send_discord = value))
+    }else if(mediaName == "telegram"){
+        content.forEach((s) => s.id === id && (s.send_telegram = value))
+    }
+    
     fsp.writeFileSync(path, JSON.stringify(content))
 };
 
